@@ -1,0 +1,56 @@
+/* CSS BOX MODEL */
+*{
+    margin: 0;
+}
+
+/* PADDING */
+.padding {
+    background: red;
+    padding: 10px;
+    
+}
+
+/* BORDER */
+/* 
+border
+border-radius
+border-style
+
+*/
+.border {
+    
+    padding: 5px;
+    border: 7px solid black;
+    border-radius: 3px;
+    border-style: groove;
+}
+
+
+/* Margin */
+.margin {
+    margin: 30px;
+    border: 1px solid black;
+}
+
+.negative-margin {
+    text-align: center;
+    
+    padding: 20px;
+    background: yellow;
+    border-radius: 50%;
+    margin-top: -35px;
+}
+
+
+
+/* OUTLINE */
+
+.outline {
+    background-color: #608438;
+    padding: 5px;
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(40, 40, 40);
+    outline: 4px solid #608438;
+    outline-offset: 10px;
+}
