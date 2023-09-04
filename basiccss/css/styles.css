@@ -1,0 +1,77 @@
+/* CSS rules */
+/* Declaration block */
+/* Selectors */
+/* Properties */
+/* Values */
+
+/* Example:
+h1 {
+    color:blue;
+
+}
+
+*/
+
+/* Grouping selectors to apply same properties */
+
+
+
+/* h1,h2 {
+    color: blue;
+} 
+
+p {
+    color: orange;
+}
+
+
+*/
+
+
+
+
+
+/* ID selectors */
+/* 
+#Id {
+    color: aqua;
+}
+ */
+
+/* Class Selectors */
+
+/* .class {
+    color: blueviolet;
+    background: gray;
+} */
+
+
+
+/* Div and Span used for Grouping */
+/* Div group Multiple elements */
+/* Span group inline */
+
+/* div {
+    background-color: black;
+    color: white;
+}
+
+span {
+    background-color: aliceblue;
+    color: orange;
+} */
+
+
+
+/* Inheritance */
+/* Children inherit styles from parent  
+    unless have their own styles
+*/
+
+
+
+/* Last Rule, Specificity and Universal Selector */
+
+/* The Last Rule applys */
+/* Different selectors have different Specificity */
+/* Universal selector  */
