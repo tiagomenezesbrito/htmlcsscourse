@@ -1,0 +1,13 @@
+/* Color Properties */
+
+/* Color, background-color background */
+
+#First {
+    color:blue; 
+    background-color: black;
+}
+
+#Second {
+    color: yellow;
+    background: black;
+}
