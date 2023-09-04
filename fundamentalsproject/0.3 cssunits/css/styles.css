@@ -1,0 +1,116 @@
+/* UNITS */
+
+
+/* 
+    PIXELS - dots 
+    Fonts in pixel aren't RESPONSIVE
+
+    FONT-SIZE
+    WIDTH
+    HEIGHT
+
+*/
+
+/* Percentual  
+
+    Relative UNIT  - Depends Parent
+
+*/
+
+.outer {
+    width: 300px;
+    height: 300px;
+    background: blue;
+}
+
+.inner {
+    width: 50%;
+    height: 50%;
+    background: red;
+}
+
+
+/* Em units */
+/* Relative to the default browser = +Responsividade */
+
+.absolute {
+    font-size: 32px;
+
+}
+
+.Relative {
+    font-size: 2em;
+}
+
+/* REM UNITS */
+/* Depends on the root 
+base value = 16px 1 REM
+
+*/
+
+.rem {
+    font-size: 2rem;
+}
+
+/* 
+    VIEWPORT UNITS Better control!!! and responsivity
+    width and Height
+    vh - height - Percent of the screen
+    vw - Width - Percent of the screen
+
+*/
+
+.hero {
+    height: 30vh;
+    width: 30vw;
+    background: blueviolet;
+}
+
+.testviewport {
+    height: 100vh;
+    width: 100vh;
+    background: black;
+}
+
+
+
+/* Calc() function  */
+
+.calc1 {
+    height: 80px;
+    width: 50px;
+    background: green;
+}
+
+.calc2 {
+    height: calc(100vh - 100px);
+    background: orange;
+}
+
+.calc3 {
+
+    height: 50vh;
+    background: blue;
+}
+
+
+
+/* 
+    Height auto
+    min-height
+    max-height
+    overflow
+
+
+
+
+*/
+
+.heighttest {
+    background: yellow;
+    width: 30vh;
+    height: 10vh;
+    overflow: hidden;
+    
+    
+}

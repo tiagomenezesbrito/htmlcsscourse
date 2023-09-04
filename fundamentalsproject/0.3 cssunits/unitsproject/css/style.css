@@ -1,0 +1,30 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Logo */
+
+.logo {
+    height: 11vh;
+    color:#B1302A ;
+}
+
+.container {
+    height: calc(100vh - 11vh);
+    background: #1F1E1F;
+    color: white;
+}
+
+.container h2 {
+    color:#B1302A ;
+}
+
+.container button {
+    background: #EC362C;
+    color: white;
+    font-size: 1.2rem;
+}
