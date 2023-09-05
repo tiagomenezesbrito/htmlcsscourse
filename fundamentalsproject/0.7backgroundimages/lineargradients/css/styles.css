@@ -1,0 +1,31 @@
+
+div {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+}
+
+
+/* LINEAR GRADIENTS */
+
+/* 
+    DEG
+    % 
+
+*/
+
+.one {
+    background: linear-gradient( 90deg,red,blue);
+}
+.two {
+    background: linear-gradient( to top,blue 20%,yellow 20%,yellow 40%, red 40%);
+}
+.three {
+    background: linear-gradient( to bottom,green 50%,blue 50%);
+}
+.four {
+    background: linear-gradient( 360deg,green 50%,blue);
+}
+.five {
+    background: linear-gradient( 360deg,red,green,blue);
+}
