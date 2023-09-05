@@ -1,0 +1,42 @@
+
+
+/* Display */
+
+/* 
+ BLOCK -> browser respects width/height and top/bottom margin
+ INLINE -> browser don't respect width/height and top/bottom margin 
+ and padding correctly
+
+*/
+
+.block{
+    background: blue;
+    color: white;
+   /* display: inline; */
+    width: 300px;
+    /* margin: 10px auto;  Centering */
+    /* margin-left: auto;  Putting on the right */
+    margin: 0 auto;
+}   
+
+.inline{
+    background: red;
+    color: white;
+    /*  display: block; */
+
+
+} 
+
+
+/* Basic Horizontal Centering */
+/* 
+Inline -> Parent -> text-align: left, Center and right
+
+Block -> width -> Margin 0 auto
+
+*/
+
+
+
+
+   

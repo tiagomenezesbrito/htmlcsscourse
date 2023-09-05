@@ -1,0 +1,34 @@
+/* Nav bar example: */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+ul li {
+    list-style-type: none;
+    
+}
+
+ul li a {
+    color: rgb(255, 94, 0);
+    text-decoration: none;
+    letter-spacing: 2px;
+    background: rgb(46, 44, 44);
+    /*  inline -> block */
+     display: block; 
+    /* Now you can apply margin top and bottom and 
+    define the width and height you want */
+    padding: 9px;
+    
+}
