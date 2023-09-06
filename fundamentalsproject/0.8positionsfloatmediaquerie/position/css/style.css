@@ -1,0 +1,57 @@
+/* POSITION 
+STATIC -> Default, normal flow
+RELATIVE -> Relative to it's normal position //space not fill
+top,bottom,left,right
+ABSOLUTE -> Relative to the closest parent with position Relative //space fill
+FIXED -> Relative to viewport(screen)
+STICKY -> toggles between relative and fixed // once the position is met in the viewport -> top 0
+*/
+
+div{
+    border: 2px solid red;
+    background: yellow;
+    margin-top: 40px;
+}
+
+
+.nav-bar{
+    background: red;
+    color:white ;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    
+}
+
+.one{
+    background: blue;
+    color: white;
+    /* position: relative;
+    bottom: 2rem;
+    left: 20%; */
+}
+
+.two{
+    background: green;
+    color: white;
+   /*  position: relative; */
+}
+
+.special{
+    background: pink;
+    font-size: 20px;
+    color: black;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+
+.test{
+   min-height: 300vh;
+}
