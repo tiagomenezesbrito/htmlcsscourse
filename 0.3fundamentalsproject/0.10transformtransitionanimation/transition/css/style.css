@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+}
+
+/* 
+Transition
+transition-property
+transition-duration
+transition-delay
+
+SHORTHAND
+
+*/
+
+
+
+div {
+    width: 300px;
+    height: 300px;
+        display: inline-block;
+}
+
+div:hover {
+    background: rgba(0, 0, 0, 0.435);
+}
+
+.one{
+    background: red;
+    transition-property: background, border-radius;
+    transition-duration: 4s, 10s;
+    transition-delay: 3s;
+}
+.two{
+    background: blue;
+    transition: background 2s 3s, 
+    transform 2s 3s;
+}
+
+.two:hover {
+    background: yellow;
+    transform: scale(2);
+
+
+}
+
+
+.three{
+    background: green;
+}
+
+.one:hover {
+    border-radius: 50%;
+}
+
+
+/* Transition timming function 
+LATER!!!
+*/
+/* 
+How the transition takes place
+
+
+*/
+
+
+.Four{
+    background: blueviolet;
+}

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    /* border: 2px solid red; */
 }
 
 /* BODY START */
@@ -18,6 +19,9 @@ body{
     background:#1A1D21 ;
      height: 5rem;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .nav-title {
@@ -42,8 +46,9 @@ body{
 /* HERO START */
 .hero{
     min-height: calc(100vh - 5rem);
-    background:linear-gradient(to right,rgba(105, 62, 27, 0.5) 30%,rgba(105, 62, 27, 0.9)), url(/fundamentalsproject/0.7backgroundimages/backgroundimgproject/img/hero-bcg.jpg) center/cover;
+    background:linear-gradient(to right,rgba(105, 62, 27, 0.5) 30%,rgba(105, 62, 27, 0.9)), url(/0.3fundamentalsproject/0.8positionsfloatmediaquerie/positionpropertyproject/img/hero-bcg.jpg) center/cover;
     color: white;
+    position: relative;
    
 }
 
@@ -51,10 +56,15 @@ body{
 .hero-center {
     width: 90vw;
     max-width: 1170px;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 5rem 0;
-    
+    margin: 0 auto; 
+     padding: 5rem 0; 
+    /* CENTERING HERO CENTER HORIZONTAL AND VERTICAL */
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    /* Transform  */
+    transform: translate(-50%,-50%);
+    text-align: center; 
     
 }
 
@@ -65,16 +75,41 @@ body{
 
 .hero-center p {
     max-width: 35em;
+    margin: 0 auto;
     margin-bottom: 1.5rem;
+    
 }
 
-.hero-btn {
+ .hero-btn {
     padding: 0.75rem 1.25rem;
     background:transparent;
     letter-spacing: 2px;
     color:white;
     border: 1px solid white;
-}
+} 
 
 
 /* HERO END */
+
+
+
+
+/* DIV TEMP START */
+
+.temp{
+    min-height: 100vh;
+}
+
+/* DIV TEMP END */
+
+
+
+
+
+/* MEDIA QUERY START */
+
+@media screen and (max-width:768px) {
+    .hero {
+        background: linear-gradient(to right, #906344,#906344);
+    }
+}
