@@ -1,0 +1,109 @@
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* BODY START */
+body{
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* BODY END */
+
+
+/* NAV BAR START */
+
+.nav {
+    background:#1A1D21 ;
+     height: 5rem;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing:2px;
+}
+
+.nav-center {
+    width: 90vw;
+    max-width: 1170;
+    margin: 0 auto;
+    color: white;
+   
+    
+   
+   
+}
+/* NAV BAR END */
+
+
+/* HERO START */
+.hero{
+    min-height: calc(100vh - 5rem);
+    background:linear-gradient(to right,rgba(105, 62, 27, 0.5) 30%,rgba(105, 62, 27, 0.9)), url(/fundamentalsproject/0.7backgroundimages/backgroundimgproject/img/hero-bcg.jpg) center/cover;
+    color: white;
+    position: relative;
+   
+}
+
+
+.hero-center {
+    width: 90vw;
+    max-width: 1170px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 5rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.hero-center h1 {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-center p {
+    max-width: 35em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+    padding: 0.75rem 1.25rem;
+    background:transparent;
+    letter-spacing: 2px;
+    color:white;
+    border: 1px solid white;
+}
+
+
+/* HERO END */
+
+
+
+
+/* DIV TEMP START */
+
+.temp{
+    min-height: 100vh;
+}
+
+/* DIV TEMP END */
+
+
+
+
+
+/* MEDIA QUERY START */
+
+@media screen and (max-width:768px) {
+    .hero {
+        background: linear-gradient(to right, rgba(105, 62, 27, 1),rgba(105, 62, 27, 1));
+    }
+}
