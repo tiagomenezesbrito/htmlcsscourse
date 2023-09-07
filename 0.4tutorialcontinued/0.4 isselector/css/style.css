@@ -1,0 +1,18 @@
+/* 
+:is() 
+
+
+*/
+
+
+
+/* 
+:not()
+
+*/
+
+h1 {
+    color: blue;
+    height: 300vh;
+    background: red;
+}
