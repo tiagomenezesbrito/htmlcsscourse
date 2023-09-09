@@ -117,12 +117,12 @@ p {
     text-transform: uppercase;
     background: var(--clr-primary);
     color: var(--clr-white);
-    padding: 0.75rem 1rem;
+    padding: 0.375rem 0.75rem;
     letter-spacing: var(--spacing);
     display: inline-block;
     font-weight: 700;
     transition: var(--transition);
-    font-size: 1rem;
+    font-size: 0.875rem;
     border: none;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -140,8 +140,30 @@ p {
     display: table;
 
 }
+/* clearfix end */
 
+.section-title h3{
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary)
+}
 
+.section-title{
+    margin-bottom: 2rem;
+}
+
+.section-center {
+    padding: 4rem 0;
+    width: 85vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:992px) {
+    .section-center{
+        width:95vw;
+        padding: 4rem 1rem;
+    }
+}
     
  /* 
 =================
@@ -227,13 +249,24 @@ SKILLS SECTION START
 
  .skills {
     background: var(--clr-grey-10);
+    
+    
+    
 
+ }
+
+ .skills-center{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
  }
 
  .skill {
     padding: 2.25rem 0;
     text-align: center;
     transition: var(--transition);
+    
+    
 
  }
 
@@ -278,3 +311,146 @@ SKILLS SECTION START
         width: 25%;
     }
 }
+
+/* 
+=====================
+SKILLS SECTION END
+=====================
+ */
+
+
+
+ /* 
+=====================
+ABOUT SECTION START
+=====================
+ */
+
+.about-img,
+.about-info {
+    padding: 2rem 0;
+}
+
+.about-picture-container {
+    background: var(--clr-primary);
+    border: 0.5rem solid var(--clr-primary) ;
+    max-width: 30rem;
+    /*Help Img scale */
+    overflow: hidden;
+}
+
+.about-picture{
+    transition: var(--transition);
+}
+
+.about-picture-container:hover .about-picture{
+    opacity:0.4;
+    transform: scale(1.2);
+}
+
+.about-text {
+    max-width: 26rem;
+    color: var(--clr-grey-5);
+}
+
+@media screen and (min-width:992px){
+    .about-img,.about-info{
+        float: left;
+        width: 50%;
+        /* background: red; */
+    }
+
+    .about-info{
+        padding-left: 3rem;
+    }
+}
+
+/* 
+=====================
+ABOUT SECTION END
+=====================
+ */
+
+
+
+ /* 
+=======================
+PRODUCTS SECTION START
+=======================
+ */
+
+.products {
+    background: var(--clr-grey-10);
+
+}
+
+.products article {
+    padding: 2rem 0;
+}
+
+.product-text {
+    color: var(--clr-grey-5);
+    max-width: 26rem;
+}
+
+.product{
+    margin-bottom: 2rem;
+}
+
+
+.product-img {
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.product-price{
+    color: var(--clr-primary);
+}
+
+
+@media  screen and (min-width:786px) {
+
+    .product {
+        float: left;
+        width: 50%;
+        padding-right:2rem;
+
+    }
+
+}
+
+
+@media  screen and (min-width:992px) {
+    .product{
+        width: 33%;
+    }
+
+}
+
+@media  screen and (min-width:1000px) {
+    .products-info{
+        float: left;
+        width: 30%;
+        
+        
+    }
+    .products-inventory{
+        float: left;
+        width: 70%;
+    }
+
+    .product{
+        margin: 0;
+        padding: 0 1.2rem;
+    }
+}
+
+
+
+ /* 
+=====================
+PRODUCTS SECTION END
+=====================
+ */
