@@ -15,13 +15,34 @@
 </head>
 <body>
     <!-- NAVBAR START -->
+        <!-- navbuttom start -->
+        <span class="nav-btn" id="nav-btn">
+            <i class="fas fa-bars"></i>
+        </span>
+        <!-- navbuttom end -->
+
+        <!-- navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="navbar-header">
+                <span class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <ul class="nav-items">
+                <li><a href="index.html"class="nav-link">Home</a></li>
+                <li><a href="skills.html"class="nav-link">skills</a></li>
+                <li><a href="about.html"class="nav-link">about</a></li>
+                <li><a href="products.html"class="nav-link">Products</a></li>
+            </ul>
+        </nav>
+
     <!-- NAVBAR END -->
 
     <!-- HEADER START -->
     <header class="header">
         <div class="banner">
             <h2>Over one hundred flavors of</h2>
-            <h1>specialy <br>crafted tea</h1>´
+            <h1>specialy <br>crafted tea</h1>
             <a href="skills.html" class="btn banner-btn">
                 Explore
             </a>
@@ -453,14 +474,45 @@
         <!-- SECTION CENTER END -->
 
     </section>
-
-
     <!-- CONTACT SECTION END-->
 
 
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <div class="section-center">
+            <div class="social-icons">
+                <!-- Social icon 1-->
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- end social icon 1-->
+
+                <!-- Social icon 2-->
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- end social icon 2-->
+
+                <!-- Social icon 3-->
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- end social icon 3-->
+            </div>
+            <h4 class="footer-text">
+                &copy; <span id="date"></span>
+                <span class="company">tea station</span>
+                all rights reserved
+            </h4>
+
+        </div>
+
+
+    </footer>
 
 
 
 
+    <script src="app.js"></script>
 </body>
 </html>
