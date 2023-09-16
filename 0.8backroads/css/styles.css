@@ -56,6 +56,14 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+/* html {
+
+scroll-behavior: smooth;
+
+} */
+
+
 body {
   font-family: var(--ff-primary);
   background: var(--clr-white);
@@ -235,6 +243,81 @@ Navbar
   border-left: 3px solid #2CAEBA;
 }
 
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-links {
+  height: 280px;
+}
+
+@media screen and (min-width:992px) {
+  /* Hide toggle button */
+  .nav-toggle{
+    display: none;
+  }
+
+
+
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+
+  .nav-links{
+    height: auto;
+    display: flex;
+    list-style: none;
+    
+  }
+
+  .nav-link:hover {
+    border-left: none;
+    padding: 0;
+    background: var(--clr-white);
+    color: var(--clr-primary-5);
+    
+    
+  }
+
+  .nav-header{
+    padding: 0 0;
+  }
+
+  .nav-link {
+    padding: 0 0;
+    margin-right: 0.8rem;
+  }
+
+  .nav-icons{
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-icon{
+    margin: 0.7rem;
+    color: var(--clr-primary-5);
+    font-size: 1.2rem;
+    transition: var(--transition);
+
+  }
+
+  .nav-icon:hover{
+    color: var(--clr-primary-1);
+  }
+
+
+}
 
 
 
@@ -440,7 +523,8 @@ Featured Tours
 
 .tour-img{
   height: 15rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .tour-date{
@@ -544,6 +628,22 @@ CONTACT
 
 }
 
+.form-control::-webkit-input-placeholder{
+  color: inherit;
+}
+
+.form-control::-moz-placeholder{
+  color: inherit;
+}
+
+.form-control:-ms-input-placeholder{
+  color: inherit;
+}
+
+.form-control::-ms-input-placeholder{
+  color: inherit;
+}
+
 .form-control::placeholder{
   color: inherit;
 }
@@ -606,7 +706,8 @@ Gallery
 
 .gallery-img{ 
   height: 15rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: var(--transition);
 }
 

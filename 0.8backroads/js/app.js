@@ -1,8 +1,7 @@
 // ********** set date ************
 // select span
-const date = (document.getElementById(
-  "date"
-).innerHTML = new Date().getFullYear());
+const date = (document.getElementById("date").innerHTML =
+  new Date().getFullYear());
 
 // ********** nav toggle ************
 // select button and links
@@ -16,8 +15,8 @@ navBtn.addEventListener("click", () => {
 // ********** smooth scroll ************
 // select links
 const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach(link => {
-  link.addEventListener("click", e => {
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
     // prevent default
     e.preventDefault();
     links.classList.remove("show-links");
@@ -25,13 +24,13 @@ scrollLinks.forEach(link => {
     const id = e.target.getAttribute("href").slice(1);
     const element = document.getElementById(id);
     //
-    let position = element.offset - 64;
+    let position = element.offsetTop - 62;
 
     window.scrollTo({
       left: 0,
       // top: element.offsetTop,
       top: position,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });
