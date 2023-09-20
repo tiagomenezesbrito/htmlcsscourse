@@ -23,10 +23,12 @@ body{
 }
 
 .container-2{
-    display: flex;
+    display: grid;
+    /* justify-content:center; */
     height: 100vh;
     background-color: #222;
-    align-items:center ;
+    align-content:center; 
+    
 }
 
 .container{
@@ -36,7 +38,8 @@ body{
     margin: 0 auto;
     height: 50vh;
     max-height: 1040px;
-
+   /*  align-items: center; */
+    justify-items: center;
 
     border: 5px solid blue;
     display: grid;
@@ -59,10 +62,13 @@ body{
     grid-area: c;
 }
 .cell-4{
+    order: -1;
     grid-area: d;
 }
 
-
+@media screen and (min-width:100px) {
+    
+}
 
 
 .cell-1{
