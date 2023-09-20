@@ -22,6 +22,7 @@ Variables
     /* BLUE SHADES */
     --mainBlue:#4A96BF;
     --second-blue:#6AA9CB;
+    --thirBlue:#1456AF;
     --blue-light:#DFEDF4;
     --mainTransition:all 0.3 linear;
     --mainSpacing: 0.2rem;
@@ -208,4 +209,310 @@ HERO
     background:rgba(255, 255, 255, 0)
 
 }
+}
+
+
+
+/* 
+==================
+CARDS
+==================
+*/
+
+.title{
+    text-align: center;
+}
+
+.cards{
+     padding: 4rem 0; 
+}
+
+
+.cards-center{
+    width: 80vw;
+    max-width: 1170px;
+    margin: 4rem auto;
+}
+
+.card{
+    border: 1px solid var(--darkcolor);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    
+}
+
+.card img{
+    min-width:212px;
+}
+
+
+.card-info{
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; 
+    background: var(--darkcolor);
+   
+}
+
+
+
+
+.card-footer{
+    background: var(--darkcolor);
+    padding: 0.4rem 1rem; 
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    justify-items: center;
+}
+
+.card-footer span{
+    color: var(--second-blue);
+}
+
+
+/* @media screen and (min-width:768px) {
+    .cards-center{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap:3rem;
+        row-gap: 2rem;
+    }
+
+    
+}
+
+@media screen and (min-width:1170px){
+    .cards-center{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+} */
+
+
+
+/* Instead of using media querys you can do this: */
+.cards-center{
+    display: grid;
+    grid-column-gap:2rem; 
+    grid-template-columns: repeat(auto-fill,minmax(268px,1fr)) ;
+}
+
+
+
+
+
+/* 
+==================
+TILES
+==================
+*/
+
+.tiles {
+    padding: 4rem 0;
+}
+.tiles-center{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 2rem auto;
+    display: grid;
+    row-gap: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .tiles-center{
+        grid-template-columns:1fr 1fr;
+        column-gap: 1rem;
+    }
+}
+
+@media screen and (min-width:992px){
+    .tiles-center{
+        grid-template-columns:repeat(3,1fr);
+        
+    }
+}
+
+@media screen and (min-width:1170px){
+    
+
+    .tiles-center{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5,300px);
+        grid-template-areas:
+        "a a a b"
+        "a a a c"
+        "d d d d"
+        "e f f f"
+        "e g h i";
+            
+    }
+    /* IMPORTANT */
+    .tiles img{
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    .tile-1{
+        grid-area:a;
+    }
+    .tile-2{
+        grid-area:b;
+    } 
+    .tile-3{
+        grid-area:c;
+    }
+    .tile-4{
+        grid-area:d;
+    }
+    .tile-5{
+        grid-area:e;
+    }
+    .tile-6{
+        grid-area:f;
+    }
+    .tile-7{
+        grid-area:g;
+    }
+    .tile-8{
+        grid-area:h;
+    }
+    .tile-9{
+        grid-area:i;
+    }
+
+
+}
+ 
+
+
+/* 
+==================
+Layout
+==================
+*/
+
+.header{
+    background-color: var(--darkcolor);
+    color: var(--blue-light);
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.navbar{
+    background:#1456AF;
+}
+
+.navbar li {
+    list-style-type:none;
+    
+}
+
+.navbar a {
+    padding: 1rem;
+    display: inline-block;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1.2rem;
+    color: var(--blue-light);
+    transition:var(--mainTransition);
+
+}
+
+.navbar a:hover{
+    color: var(--main-black);
+}
+
+.content{
+    padding: 2rem;
+}
+
+.content p {
+    font-size: 1rem;
+
+}
+
+.sidebar{
+    background: var(--darkcolor);
+    padding: 1rem 0;
+    display: grid;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--blue-light);
+    font-size: 1.2rem;
+
+}
+
+.footer{
+    background: var(--thirBlue);
+    text-align: center;
+    color: var(--blue-light);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    
+}
+
+.footer p {
+    font-size: 1.2rem;
+}
+
+/* Grid */
+
+.main{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+}
+
+
+@media  screen and (min-width:768px) {
+    .navbar ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+@media screen and (min-width:992px){
+    .main{
+        grid-template-columns: 200px 1fr 50px;
+        grid-template-rows: auto 1fr auto ;
+         grid-template-areas:
+        "a a a"
+        "b c d"
+        "e e e"; 
+    }
+
+    .header{
+        grid-area: a;
+
+    }
+
+    .navbar{
+       grid-area: b;
+    }
+    .navbar ul{
+        grid-template-columns: 1fr;
+        align-items: center;
+        min-height: 100%;
+    }
+   
+
+    .content{
+        grid-area: c;
+    }
+    .sidebar{
+        grid-area: d;
+        grid-template-columns: 1fr;
+        align-items: center;
+        min-height: 100%;
+
+    }
+    .footer{
+        grid-area: e;
+        background: var(--darkcolor);
+    }
+
 }
