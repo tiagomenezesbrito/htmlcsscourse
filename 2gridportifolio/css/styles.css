@@ -165,6 +165,24 @@ p {
   }
 }
 /* added during recording */
+ .underline{
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+} 
+
+
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.bg-grey{
+  background: var(--clr-grey-10);
+}
+
 
 /*
 =============== 
@@ -246,6 +264,19 @@ Navbar
 }
 
 
+/* Fixed  navbar */
+.navbar-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--clr-white);
+  z-index: 2;
+  box-shadow: var(--light-shadow);
+}
+
+
+
 /*
 =============== 
 Sidebar
@@ -267,8 +298,14 @@ Sidebar
   place-items: center;
   transition: var(--transition);
   /* Add Later */
-  /* transform: translateX(-100%); */
+  transform: translateX(-100%); 
 }
+.show-sidebar{
+  transform: translateX(0);
+}
+
+
+
 
 .sidebar-links{
   text-align: center;
@@ -285,10 +322,43 @@ Sidebar
   margin-bottom: 1.5rem;
 }
 
+.sidebar-links a:hover{
+  color: var(--clr-primary-5);
+}
+
 .social-icons{
   display: grid;
-  
+  margin-top: 3rem;
+  width: 20rem;
   grid-template-columns: repeat(5,1fr);
+  justify-items: center;
+}
+
+.social-icon{
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  transition: var(--transition);
+
+}
+
+.social-icon:hover{
+  color: var(--clr-primary-5);
+
+}
+
+.close-btn{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  background: transparent;
+  border: transparent;
+  transition: var(--transition);
+  color: #bb2525;
+}
+
+.close-btn:hover{
+  color: #e66b6b;
 }
 
 
@@ -299,21 +369,199 @@ Hero
 */
 /* underline added to globals */
 
+
+.hero .underline{
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.hero-img{
+  display: none;
+}
+
+.hero{
+  background: var(--clr-primary-10);
+}
+
+.hero-center{
+  min-height: calc(100vh - 5rem);
+  display:grid;
+  place-items: center;
+}
+
+.hero-info h4{
+  color: var(--clr-grey-5);
+}
+
+.hero-icons{
+  justify-items: start;
+}
+
+.hero-btn{
+  margin-top: 1.25rem;
+}
+
+@media screen and (min-width:992px) {
+  .hero-img{
+    display: block;
+    position: relative;
+    
+  }
+
+  .hero-center{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-photo{
+    max-width: 25rem;
+    max-height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    position: relative;
+  }
+
+  .hero-img::before,
+  .about-img:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid var(--clr-primary-5);
+    border-radius: var(--radius);
+    top: 2rem;
+    right: -2rem;
+
+  }
+
+}
+
+
+
 /*
 =============== 
 About
 ===============
 */
+
+.about-photo{
+    max-width: 25rem;
+    max-height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    /* margin: 0 auto; */
+    position: relative;
+  }
+
 /* section title added to globals */
+.about-title{
+  text-align: left;
+}
+
+.about-title .underline{
+  margin-left: 0;
+}
+
+.about-center{
+  display: grid;
+  gap: 3rem 2rem;
+}
+
+.about-img{
+  justify-self: center;
+}
+
+@media screen and (min-width:992px) {
+  .about-center{
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .about-img{
+    position: relative;
+  }
+
+  .about-img:before{
+    right: 2rem;
+  }
+
+  .about-info{
+    align-self: center;
+  }
+}
 
 /*
 =============== 
 Services
 ===============
 */
-/* small screen layout setup */
 /* bg-grey in globals */
 
+
+.service{
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.service-title .underline{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service .underline{
+  width: 3rem;
+  height: 0.12rem;
+  transition: var(--transition);
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.service p {
+  transition: var(--transition);
+}
+
+.service:hover{
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+
+.service:hover p{
+  color: var(--clr-white);
+}
+
+.service:hover .underline{
+  background: var(--clr-white);
+}
+
+
+
+@media screen and (min-width:676px) {
+  .services-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width:992px) {
+  .services-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+
+/* small screen layout setup */
 /*
 =============== 
 Projects
