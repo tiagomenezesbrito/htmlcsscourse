@@ -68,9 +68,64 @@ function increaseAmount(id) {
   cart = cart.map((cartItem) => {
     if (cartItem.id === id) {
       newAmount = cartItem.amount + 1;
-      cartItem = { ...cartItem, amount: newAmoun };
+      cartItem = { ...cartItem, amount: newAmount };
     }
     return cartItem;
   });
   return newAmount;
 }
+function decreaseAmount(id) {
+  let newAmount;
+  cart = cart.map((cartItem) => {
+    if (cartItem.id === id) {
+      newAmount = cartItem.amount - 1;
+      cartItem = { ...cartItem, amount: newAmount };
+    }
+    return cartItem;
+  });
+  return newAmount;
+}
+
+function setupCartFunctionality() {
+  cartItemsDOM.addEventListener("click", function (e) {
+    const element = e.target;
+    const parent = e.target.parentElement;
+    const id = e.target.dataset.id;
+    const parentID = e.target.parentElement.dataset.id;
+    // remove
+    if (element.classList.contains("cart-item-remove-btn")) {
+      removeItem(id);
+      // parent.parentElement.remove();
+      element.parentElement.parentElement.remove();
+    }
+    // increase
+    if (parent.classList.contains("cart-item-increase-btn")) {
+      const newAmount = increaseAmount(parentID);
+      parent.nextElementSibling.textContent = newAmount;
+    }
+    // decrease
+    if (parent.classList.contains("cart-item-decrease-btn")) {
+      const newAmount = decreaseAmount(parentID);
+      if (newAmount === 0) {
+        removeItem(parentID);
+        parent.parentElement.parentElement.remove();
+      } else {
+        parent.previousElementSibling.textContent = newAmount;
+      }
+    }
+    displayCartItemCount();
+    displayCartTotal();
+    setStorageItem("cart", cart);
+  });
+}
+const init = () => {
+  // display amount of cart items
+  displayCartItemCount();
+  // display total
+  displayCartTotal();
+  // add all cart items to the dom
+  displayCartItemsDOM();
+  // setup cart functionality
+  setupCartFunctionality();
+};
+init();
